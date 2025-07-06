@@ -1,1 +1,2 @@
-console.log("Meu primeiro desafio de código DIO que ta me dando dor de cabeça")
+let nome = "DIO";
+console.log(nome)
