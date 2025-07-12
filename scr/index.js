@@ -1,25 +1,25 @@
-// Variáveis para nome e XP do herói
-let nome = "Zaion"; // Altere para o nome desejado
-let xp = 9200; // Altere para a quantidade de XP desejada
+// IMPORTANTE: Na DIO, as funções "gets" e "print" são acessíveis globalmente, onde:
+// - "gets": lê UMA linha com dado(s) de entrada (inputs) do usuário;
+// - "print": imprime um texto de saída (output) e pula uma linha ("\n") automaticamente.
 
-let nivel = "";
+let operacao = parseInt(gets());
+let quantidade = parseInt(gets());
 
-if (xp < 1000) {
-    nivel = "Ferro";
-} else if (xp >= 1001 && xp <= 2000) {
-    nivel = "Bronze";
-} else if (xp >= 2001 && xp <= 5000) {
-    nivel = "Prata";
-} else if (xp >= 5001 && xp <= 7000) {
-    nivel = "Ouro";
-} else if (xp >= 7001 && xp <= 8000) {
-    nivel = "Platina";
-} else if (xp >= 8001 && xp <= 9000) {
-    nivel = "Ascendente";
-} else if (xp >= 9001 && xp <= 10000) {
-    nivel = "Imortal";
-} else if (xp >= 10001) {
-    nivel = "Radiante";
+let estoque = 5;
+
+// Verifica se a operação é para adicionar ao estoque (1)
+if (operacao === 1) {
+    estoque += quantidade;
+    print(estoque);
 }
-
-console.log(`O Herói de nome ${nome} está no nível de ${nivel}`);
+// Se a operação for para retirar do estoque (2)
+else if (operacao === 2) {
+    // Se a quantidade a ser retirada for maior que o estoque disponível, exibe mensagem de erro
+    if (quantidade > estoque) {
+        print("Estoque insuficiente");
+    } else {
+        // Caso contrário, retira a quantidade do estoque e exibe o valor atualizado
+        estoque -= quantidade;
+        print(estoque);
+    }
+}
