@@ -1,34 +1,36 @@
-Descrição
-Você está simulando um controle simples de estoque. O sistema começa com um estoque inicial de 5 unidades.
+# Entendendo o Desafio
+ 
+### Agora é a sua hora de brilhar e construir um perfil de destaque na DIO! Explore todos os conceitos explorados até aqui e replique (ou melhore, porque não?) este projeto prático. Para isso, crie seu próprio repositório e aumente ainda mais seu portfólio de projetos no GitHub, o qual pode fazer toda diferença em suas entrevistas técnicas 😎
+ 
+### Neste repositório, insira todos os links e arquivos necessários para seu projeto, seja um arquivo de banco de dados ou um link para o template no Figma.
+ 
+Dica: Se o expert forneceu um repositório Github, você pode dar um "fork" no repositório dele para organizar suas alterações e evoluções mantendo uma referência direta ao código-fonte original.
+ 
+## Instruções para entrega
+ # 2️⃣ Calculadora de partidas Rankeadas
+**O Que deve ser utilizado**
 
-O usuário pode escolher entre duas opções:
+- Variáveis
+- Operadores
+- Laços de repetição
+- Estruturas de decisões
+- Funções
 
-1 - Adicionar uma quantidade ao estoque.
-2 - Retirar uma quantidade do estoque.
-O sistema realiza a operação e exibe o estoque atualizado. Caso o usuário tente retirar uma quantidade maior do que o estoque disponível, o sistema deve exibir a mensagem Estoque insuficiente e manter o estoque inalterado.
+## Objetivo:
 
-Entrada
-A entrada será composta por dois números inteiros, na seguinte ordem:
+Crie uma função que recebe como parâmetro a quantidade de vitórias e derrotas de um jogador,
+depois disso retorne o resultado para uma variável, o saldo de Rankeadas deve ser feito através do calculo (vitórias - derrotas)
 
-O primeiro número representa a operação desejada:
-1 para adicionar ao estoque.
-2 para retirar do estoque.
-O segundo número representa a quantidade da operação.
-Saída
-O programa deve exibir uma das seguintes saídas:
+Se vitórias for menor do que 10 = Ferro
+Se vitórias for entre 11 e 20 = Bronze
+Se vitórias for entre 21 e 50 = Prata
+Se vitórias for entre 51 e 80 = Ouro
+Se vitórias for entre 81 e 90 = Diamante
+Se vitórias for entre 91 e 100= Lendário
+Se vitórias for maior ou igual a 101 = Imortal
 
-O estoque atualizado após a operação.
-Ou a mensagem Estoque insuficiente, caso a tentativa de retirada seja maior que o estoque atual.
-Exemplos
-A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+## Saída
 
-Entrada	Saída
-1
-3	8
-2
-4	1
-2
-6	Estoque insuficiente
-1
-5	10
-Atenção: É extremamente importante que as entradas e saídas sejam exatamente iguais às descritas na descrição do desafio de código.
+Ao final deve se exibir uma mensagem:
+"O Herói tem de saldo de **{saldoVitorias}** está no nível de **{nivel}**"
+ 
