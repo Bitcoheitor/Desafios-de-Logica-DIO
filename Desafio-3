@@ -1,0 +1,68 @@
+# 2️⃣ Simulando Frete Grátis e Desconto
+
+** O Que deve ser utilizado**
+
+- Variáveis
+- Operadores
+- Laços de repetição
+- Estruturas de decisões
+- Funções
+
+## Objetivo:
+
+O objetivo deste desafio é criar uma função simples que analisa o valor total de uma compra em um e-commerce e verifica se o cliente tem direito a frete grátis. Caso o valor da compra seja superior a R$ 150,00, o frete será gratuito.
+Caso contrário, será informado que o frete não está incluso.
+
+## Entrada
+
+A entrada será um número decimal que representa o valor total da compra. O valor da compra será fornecido em reais, como por exemplo 70.00 ou 149.99.
+
+Valor da compra em formato decimal (por exemplo, 70.00, 150.00, 149.99, etc).
+O valor será comparado com R$ 150,00 para determinar a elegibilidade para o frete grátis.
+
+## Saída
+
+A função deverá retornar uma das seguintes mensagens, dependendo do valor da compra:
+
+Se o valor da compra for superior a R$ 150,00, a saída será: "Você ganhou frete grátis!"
+Se o valor da compra for igual ou inferior a R$ 150,00, a saída será: "Frete não incluso."
+Exemplos
+A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+
+| Entrada	| Saída |
+| :-------: | ------ |
+| 150.01	| Você ganhou frete grátis! |
+| 75.00	| Frete não incluso. |
+| 149.99 | Frete não incluso. |
+
+~~~
+function calcularNivel(vitorias, derrotas) {
+    const saldoVitorias = vitorias - derrotas;
+    let nivel = '';
+
+    if (vitorias < 10) {
+        nivel = 'Ferro';
+    } else if (vitorias >= 11 && vitorias <= 20) {
+        nivel = 'Bronze';
+    } else if (vitorias >= 21 && vitorias <= 50) {
+        nivel = 'Prata';
+    } else if (vitorias >= 51 && vitorias <= 80) {
+        nivel = 'Ouro';
+    } else if (vitorias >= 81 && vitorias <= 90) {
+        nivel = 'Diamante';
+    } else if (vitorias >= 91 && vitorias <= 100) {
+        nivel = 'Lendário';
+    } else if (vitorias >= 101) {
+        nivel = 'Imortal';
+    }
+
+    return { saldoVitorias, nivel };
+}
+
+// Exemplo de uso:
+let vitorias = 75; // Altere para testar
+let derrotas = 20; // Altere para testar
+
+const resultado = calcularNivel(vitorias, derrotas);
+console.log(`O Herói tem de saldo de **${resultado.saldoVitorias}** está no nível de **${resultado.nivel}**`);
+~~~
