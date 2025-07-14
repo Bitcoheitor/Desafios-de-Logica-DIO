@@ -1,7 +1,7 @@
 
  # 2️⃣ Calculadora de partidas Rankeadas
 
-**O Que deve ser utilizado**
+## O Que deve ser utilizado
 
 - Variáveis
 - Operadores
