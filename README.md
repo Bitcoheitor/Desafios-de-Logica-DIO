@@ -1,5 +1,5 @@
 
-# 1️⃣ Desafio de Lógica lançados por Felipão no Curso - Lógicas de Programação - "Savegnago"
+# Desafios de Lógica lançados por Felipão no Curso - Lógicas de Programação - "Savegnago"
 
 **O Que deve ser utilizado**
 
@@ -11,4 +11,4 @@
 
 ## Objetivo
 
-Demostrar habilidades desenvolvidas durante o Curso
+Demostrar habilidades desenvolvidas durante o Curso, utilizando Lógica de Programação.
