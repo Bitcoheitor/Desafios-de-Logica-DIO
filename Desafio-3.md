@@ -1,6 +1,6 @@
-# 2️⃣ Simulando Frete Grátis e Desconto
+# 3 Simulando Frete Grátis e Desconto
 
-** O Que deve ser utilizado**
+## O Que deve ser utilizado
 
 - Variáveis
 - Operadores
@@ -35,34 +35,21 @@ A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectiva
 | 75.00	| Frete não incluso. |
 | 149.99 | Frete não incluso. |
 
+
 ~~~
-function calcularNivel(vitorias, derrotas) {
-    const saldoVitorias = vitorias - derrotas;
-    let nivel = '';
+//TODO: Crie a Função calcularFrete()
+function calcularFrete() {
+    // Lê o valor total da compra usando "gets"
+    let valorCompra = parseFloat(gets().trim());
 
-    if (vitorias < 10) {
-        nivel = 'Ferro';
-    } else if (vitorias >= 11 && vitorias <= 20) {
-        nivel = 'Bronze';
-    } else if (vitorias >= 21 && vitorias <= 50) {
-        nivel = 'Prata';
-    } else if (vitorias >= 51 && vitorias <= 80) {
-        nivel = 'Ouro';
-    } else if (vitorias >= 81 && vitorias <= 90) {
-        nivel = 'Diamante';
-    } else if (vitorias >= 91 && vitorias <= 100) {
-        nivel = 'Lendário';
-    } else if (vitorias >= 101) {
-        nivel = 'Imortal';
+    // TODO: Crie a condição para verificar se o valor total ultrapassou R$ 150.00:
+    if (valorCompra > 150.00) {
+        print("Você ganhou frete grátis!");
+    } else {
+        print("Frete não incluso.");
     }
-
-    return { saldoVitorias, nivel };
 }
 
-// Exemplo de uso:
-let vitorias = 75; // Altere para testar
-let derrotas = 20; // Altere para testar
-
-const resultado = calcularNivel(vitorias, derrotas);
-console.log(`O Herói tem de saldo de **${resultado.saldoVitorias}** está no nível de **${resultado.nivel}**`);
+// Chama a função para calcular o frete
+calcularFrete();
 ~~~
