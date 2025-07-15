@@ -1,4 +1,4 @@
-# 3️⃣Simulando Frete Grátis e Desconto
+# 3️⃣ Escrevendo as classes de um Jogo
 
 ## O Que deve ser utilizado
 
@@ -7,49 +7,83 @@
 - Laços de repetição
 - Estruturas de decisões
 - Funções
+- Classes e Objetos
 
 ## Objetivo:
 
-O objetivo deste desafio é criar uma função simples que analisa o valor total de uma compra em um e-commerce e verifica se o cliente tem direito a frete grátis. Caso o valor da compra seja superior a R$ 150,00, o frete será gratuito.
-Caso contrário, será informado que o frete não está incluso.
+Crie uma classe generica que represente um herói de uma aventura e que possua as seguintes propriedades:
 
-## Entrada
+- nome
+- idade
+- tipo (ex: guerreiro, mago, monge, ninja )
 
-A entrada será um número decimal que representa o valor total da compra. O valor da compra será fornecido em reais, como por exemplo 70.00 ou 149.99.
+além disso, deve ter um método chamado atacar que deve atender os seguientes requisitos:
 
-Valor da compra em formato decimal (por exemplo, 70.00, 150.00, 149.99, etc).
-O valor será comparado com R$ 150,00 para determinar a elegibilidade para o frete grátis.
+- exibir a mensagem: "o {tipo} atacou usando {ataque}")
+- aonde o {tipo} deve ser concatenando o tipo que está na propriedade da classe
+- e no {ataque} deve seguir uma descrição diferente conforme o tipo, seguindo a tabela abaixo:
+
+se mago -> no ataque exibir (usou magia)
+se guerreiro -> no ataque exibir (usou espada)
+se monge -> no ataque exibir (usou artes marciais)
+se ninja -> no ataque exibir (usou shuriken)
 
 ## Saída
 
-A função deverá retornar uma das seguintes mensagens, dependendo do valor da compra:
+Ao final deve se exibir uma mensagem:
 
-Se o valor da compra for superior a R$ 150,00, a saída será: "Você ganhou frete grátis!"
-Se o valor da compra for igual ou inferior a R$ 150,00, a saída será: "Frete não incluso."
-Exemplos
-A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
-
-| Entrada	| Saída |
-| :-------: | ------ |
-| 150.01	| Você ganhou frete grátis! |
-| 75.00	| Frete não incluso. |
-| 149.99 | Frete não incluso. |
+#### "o {tipo} atacou usando {ataque}"
+  ex: mago atacou usando magia,
+  guerreiro atacou usando espada
 
 
 ~~~
-//TODO: Crie a Função calcularFrete()
-function calcularFrete() {
-    // Lê o valor total da compra usando "gets"
-    let valorCompra = parseFloat(gets().trim());
 
-    // TODO: Crie a condição para verificar se o valor total ultrapassou R$ 150.00:
-    if (valorCompra > 150.00) {
-        print("Você ganhou frete grátis!");
-    } else {
-        print("Frete não incluso.");
+// Classe que representa um herói de aventura
+class Heroi {
+    constructor(nome, idade, tipo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.tipo = tipo;
+    }
+
+    atacar() {
+        let ataque = '';
+        switch (this.tipo) {
+            case 'mago':
+                ataque = 'magia';
+                break;
+            case 'guerreiro':
+                ataque = 'espada';
+                break;
+            case 'monge':
+                ataque = 'artes marciais';
+                break;
+            case 'ninja':
+                ataque = 'shuriken';
+                break;
+            default:
+                ataque = 'um ataque desconhecido';
+        }
+        return ataque;
     }
 }
 
-// Chama a função para calcular o frete
-calcularFrete();
+// Exemplo que exibe o resultado de todos os heróis:
+const herois = [
+    new Heroi('Luna', 22, 'ninja'),
+    new Heroi('Arus', 30, 'mago'),
+    new Heroi('Baldur', 35, 'guerreiro'),
+    new Heroi('Shifu', 50, 'monge')
+];
+
+herois.forEach(heroi => {
+    const ataque = heroi.atacar();
+    console.log(`Nome: ${heroi.nome}`);
+    console.log(`Tipo: ${heroi.tipo}`);
+    console.log(`Idade: ${heroi.idade}`);
+    console.log(`Ataque: ${ataque}`);
+    console.log(`o ${heroi.tipo} atacou usando ${ataque}`);
+    console.log('');
+});
 ~~~
