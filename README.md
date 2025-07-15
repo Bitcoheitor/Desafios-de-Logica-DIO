@@ -3,11 +3,12 @@
 
 **O Que deve ser utilizado**
 
-- Funções
-- Variáveis
-- Operadores
-- Laços de repetição
-- Estruturas de decisões
+-Variáveis
+-Operadores
+-Laços de repetição
+-Estruturas de decisões
+-Funções
+-Classes e Objetos
 
 ## Objetivo
 
