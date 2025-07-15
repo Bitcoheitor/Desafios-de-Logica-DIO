@@ -59,4 +59,5 @@ let derrotas = 20; // Altere para testar
 
 const resultado = calcularNivel(vitorias, derrotas);
 console.log(`O Herói tem de saldo de **${resultado.saldoVitorias}** está no nível de **${resultado.nivel}**`);
+
 ~~~
